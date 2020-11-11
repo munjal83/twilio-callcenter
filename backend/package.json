@@ -14,7 +14,7 @@
     "twilio": "^3.51.0"
   },
   "scripts": {
-    "start:dev": "nodemon index.js"
+    "start": "node index.js"
   },
   "nodemonConfig": {
     "env": {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'http://localhost:3001',
+    baseURL: 'https://twilio-call-center-server.herokuapp.com',
     responseType: "json"
 })

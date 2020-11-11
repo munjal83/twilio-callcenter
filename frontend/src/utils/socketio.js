@@ -1,5 +1,24 @@
 import io from 'socket.io-client'
 
-const socket = io.connect('http://localhost:3001');
+class Socket {
+    url = 'https://twilio-call-center-server.herokuapp.com';
+    client = null;
 
-export default socket;
+    constructor() {
+        this.client = io.connect(this.url);
+    }
+
+    addToken = (token) => {
+        this.client = io.connect(this.url, {
+            query: { token }
+        });
+    }
+
+    removeToken = () => {
+        this.client = io.connect(this.url)
+    }
+}
+
+const instance = new Socket();
+
+export default instance;

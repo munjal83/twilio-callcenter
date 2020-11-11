@@ -7,7 +7,7 @@ function Login({ user, setUser, sendSmsCode, sendVerificationCode }) {
       draft[data.name] = data.value;
     });
   };
-  const { userName, mobileNumber, verificationCode, verificationSent } = user;
+  const { username, mobileNumber, verificationCode, verificationSent } = user;
 
   return (
     <Grid textAlign='center' verticalAlign='middle' style={{ height: '100vh' }}>
@@ -21,9 +21,9 @@ function Login({ user, setUser, sendSmsCode, sendVerificationCode }) {
               fluid
               icon='user'
               iconPosition='left'
-              placeholder='Username'
-              value={userName}
-              name='userName'
+              placeholder='username'
+              value={username}
+              name='username'
               onChange={(event, data) => populateFields(event, data)}
             />
             <Form.Input
